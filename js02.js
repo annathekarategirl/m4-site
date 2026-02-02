@@ -19,3 +19,12 @@ function setupForm() {
       document.getElementById("photoDist").value=0;
 
 }
+//setup form when page loads
+
+window.addEventListener("load",setupForm);
+
+//declare global constants for the app
+const EMP_COST = 100; //photographer per hour
+const BOOK_COST=350; //memory book cost
+const REPRO_COST=1250; //cost of reproduction rights
+const TRAVEL_COST=2; //cost per mile travelled
