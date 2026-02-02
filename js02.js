@@ -16,7 +16,9 @@ function setupForm() {
       document.getElementById("photoHrs").value=2;
       document.getElementById("makeBook").checked=false;
       document.getElementById("photoRights").checked=false;
-      document.getElementById("photoDist").value=0;
+      document.getElementById("photoDist").va
+      
+      getEstimate();
 
 }
 //setup form when page loads
@@ -41,6 +43,8 @@ function getEstimate() {
       totalCost+= photographers * hours * EMP_COST;
       totalCost+= photographers * distance * TRAVEL_COST;
       //add cost of book and/or rights if purchased
-      totalCost+= buyBook ? BOOK_COST :0;
+      totalCost+= buyBook ? BOOK_COST: 0;
       totalCost+= buyRights ? REPRO_COST: 0;
+      //display total cost
+      document.getElementById("estimate").innerHTML ="$"+ totalCost;
 }
