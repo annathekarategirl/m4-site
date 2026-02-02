@@ -19,7 +19,11 @@ function setupForm() {
       document.getElementById("photoDist").va
       
       getEstimate();
-
+      document.getElementById("photoNum").onchange = getEstimate;
+      document.getElementById("photoHrs").onchange = getEstimate;
+      document.getElementById("photoDist").onchange = getEstimate;
+      document.getElementById("makeBook").onchange = getEstimate;
+      document.getElementById("photoRights").onchange = getEstimate;
 }
 //setup form when page loads
 
